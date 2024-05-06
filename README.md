@@ -1,14 +1,16 @@
 # FastAPI Tutorial
 
-# Docker Deploy
+This is a test bed for practicing a python fast-api, postgresql, and docker stack.
 
-## Development
+## Deployment
+
+### Development
 
 Set local development PostgreSQL connection info in ```compose.override.yaml```
 
 ```docker compose up -d```
 
-# Production
+## Production
 
 
 Set Production PostgreSQL connection info in ```compose.prod.yaml```
