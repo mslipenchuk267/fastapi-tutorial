@@ -1,0 +1,7 @@
+services:
+  backend:
+    environment:
+      - FASTAPITUT_POSTGRESQL_DB_HOST=host.docker.internal
+      - FASTAPITUT_POSTGRESQL_DB_NAME=fastapitutdb
+      - FASTAPITUT_POSTGRESQL_DB_USER=myuser
+      - FASTAPITUT_POSTGRESQL_DB_PASS=mypass

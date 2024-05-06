@@ -1,0 +1,14 @@
+services:
+  backend:
+    environment:
+      - FASTAPITUT_POSTGRESQL_DB_HOST=host.docker.internal
+      - FASTAPITUT_POSTGRESQL_DB_NAME=fastapitutdbprod
+      - FASTAPITUT_POSTGRESQL_DB_USER=myuserprod
+      - FASTAPITUT_POSTGRESQL_DB_PASS=mypassprod
+    #deploy:
+    #replicas: 3
+    #update_config:
+    #  parallelism: 2
+    #  delay: 10s
+    #restart_policy:
+    #  condition: on-failure
