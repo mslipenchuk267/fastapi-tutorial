@@ -1,7 +1,14 @@
 services:
   backend:
     environment:
-      - FASTAPITUT_POSTGRESQL_DB_HOST=host.docker.internal
+      - FASTAPITUT_POSTGRESQL_DB_HOST=db
       - FASTAPITUT_POSTGRESQL_DB_NAME=fastapitutdb
       - FASTAPITUT_POSTGRESQL_DB_USER=myuser
       - FASTAPITUT_POSTGRESQL_DB_PASS=mypass
+  db:
+    environment:
+      - POSTGRES_DB=fastapitutdb
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypass
+    volumes:
+      - /var/lib/postgresql/14/main:/var/lib/postgresql/data:rw
