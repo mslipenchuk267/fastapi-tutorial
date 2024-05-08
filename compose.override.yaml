@@ -11,4 +11,8 @@ services:
       - POSTGRES_USER=myuser
       - POSTGRES_PASSWORD=mypass
     volumes:
-      - /var/lib/postgresql/14/main:/var/lib/postgresql/data:rw
+      - pgdata-dev:/var/lib/postgresql/data:rw
+      # Ubuntu Binding option:
+      #- /var/lib/postgresql/14/main:/var/lib/postgresql/data:rw
+volumes:
+  pgdata-dev:
