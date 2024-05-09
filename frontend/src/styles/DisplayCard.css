@@ -1,9 +1,0 @@
-.base-card.display-card {
-  height: auto;       /* Allow natural content height */
-  max-height: 400px;  /* Maximum height before scrolling */
-}
-  
-.item {
-  padding: 5px 0; /* Spacing for each item */
-  border-bottom: 1px solid #eee;
-}
