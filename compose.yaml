@@ -1,4 +1,15 @@
 services:
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      backend:
+        ipv4_address: 192.168.92.8
+
   backend:
     build: ./backend
     ports:
@@ -8,6 +19,7 @@ services:
     networks:
       backend:
         ipv4_address: 192.168.92.10
+
   db:
     image: postgres:14.11
     ports:
@@ -15,6 +27,7 @@ services:
     networks:
       backend:
         ipv4_address: 192.168.92.12
+
 networks:
   backend:
     ipam:
